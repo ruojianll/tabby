@@ -8,3 +8,5 @@ EXAMPLE:
 	visibility:hidden
 }
 ```
+
+`hidden` attribute is not compability with some thrid libs like `swiper.js`, etc.
