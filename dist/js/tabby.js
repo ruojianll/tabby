@@ -101,7 +101,7 @@ if (!Element.prototype.matches) {
 		tab.closest('li').removeAttribute('role');
 		content.removeAttribute('role');
 		content.removeAttribute('aria-labelledby');
-		content.removeAttribute('hidden');
+		content.removeAttribute('visibility');
 
 	};
 
@@ -131,7 +131,7 @@ if (!Element.prototype.matches) {
 		} else {
 			tab.setAttribute('aria-selected', 'false');
 			tab.setAttribute('tabindex', '-1');
-			content.setAttribute('hidden', 'hidden');
+			content.setAttribute('visibility', 'hidden');
 		}
 
 	};
@@ -155,7 +155,7 @@ if (!Element.prototype.matches) {
 
 		// Hide the content
 		if (!content) return;
-		content.setAttribute('hidden', 'hidden');
+		content.setAttribute('visibility', 'hidden');
 
 	};
 
@@ -167,7 +167,7 @@ if (!Element.prototype.matches) {
 	var show = function (tab, content) {
 		tab.setAttribute('aria-selected', 'true');
 		tab.setAttribute('tabindex', '0');
-		content.removeAttribute('hidden');
+		content.removeAttribute('visibility');
 		tab.focus();
 	};
 
