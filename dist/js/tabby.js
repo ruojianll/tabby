@@ -279,7 +279,7 @@ if (!Element.prototype.matches) {
 		publicAPIs.destroy = function () {
 
 			// Get all tabs
-			var tabs = tabWrapper.querySelectorAll('a');
+			var tabs = tabWrapper.querySelectorAll('a[tabby-type=a]');
 
 			// Add roles to tabs
 			Array.prototype.forEach.call(tabs, (function (tab) {
@@ -314,7 +314,7 @@ if (!Element.prototype.matches) {
 			// Variables
 			tabWrapper = document.querySelector(selector);
 			if (!tabWrapper) return;
-			var tabs = tabWrapper.querySelectorAll('a');
+			var tabs = tabWrapper.querySelectorAll('a[tabby-tab]');
 
 			// Add role to wrapper
 			tabWrapper.setAttribute('role', 'tablist');
